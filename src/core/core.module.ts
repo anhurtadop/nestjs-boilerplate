@@ -9,7 +9,7 @@ import joiSchema from './configs/joi-schema';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: environment[process.env.NODE_ENV],
+      envFilePath: environment[process.env.NODE_ENV] || '.env',
       isGlobal: true,
       load: [config],
       validationSchema: joiSchema,
