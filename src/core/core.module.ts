@@ -20,7 +20,7 @@ import joiSchema from './configs/joi-schema';
       fallbackLanguage: 'en',
       logging: true,
       loaderOptions: {
-        path: path.join(__dirname, '../../i18n'),
+        path: path.join(__dirname, '../i18n'),
         watch: true,
       },
       resolvers: [new HeaderResolver(['lang'])],
