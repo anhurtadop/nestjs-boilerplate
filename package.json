@@ -1,14 +1,19 @@
 {
   "name": "nestjs-boilerplate",
   "version": "0.0.1",
-  "description": "Boilerplate for a App with NestJS 10",
-  "author": "Anthony Hurtado",
+  "description": "Boilerplate for a API with NestJS 10",
   "private": true,
   "license": "MIT",
   "engines": {
     "node": ">=20.x",
     "npm": ">=10.x"
   },
+  "contributors": [
+    {
+      "name": "Anthony Hurtado",
+      "url": "https://github.com/anhurtadop"
+    }
+  ],
   "scripts": {
     "build": "npm run build:clean && nest build -p tsconfig.build.json && npm run build:alias",
     "build:clean": "rimraf dist; exit 0",
@@ -21,7 +26,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "prepare": "husky"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
